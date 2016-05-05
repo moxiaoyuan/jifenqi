@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var huancun:Int = 0//缓存
     var operator1:String = "+"//记录操作符
     
+    @IBOutlet weak var time: UILabel!
     @IBOutlet weak var result_1: UITextField!
     @IBOutlet weak var result_2: UITextField!
     @IBAction func point1(sender: UIButton) {
