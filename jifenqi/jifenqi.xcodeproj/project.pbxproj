@@ -14,6 +14,11 @@
 		C82AE17A1CC5174600811BD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82AE1781CC5174600811BD9 /* LaunchScreen.storyboard */; };
 		C82AE1851CC5174600811BD9 /* jifenqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AE1841CC5174600811BD9 /* jifenqiTests.swift */; };
 		C82AE1901CC5174600811BD9 /* jifenqiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AE18F1CC5174600811BD9 /* jifenqiUITests.swift */; };
+		C876FBE11CE0C4AA006335CF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C876FBE01CE0C4AA006335CF /* libsqlite3.0.tbd */; };
+		C876FBE71CE0C5BB006335CF /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C876FBE41CE0C5BB006335CF /* SQLiteDB.swift */; };
+		C876FBE81CE0C5BB006335CF /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C876FBE51CE0C5BB006335CF /* SQLTable.swift */; };
+		C876FBE91CE0C5BB006335CF /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = C876FBE61CE0C5BB006335CF /* String-Extras.swift */; };
+		C876FBEB1CE0C5CF006335CF /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = C876FBEA1CE0C5CF006335CF /* data.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,12 @@
 		C82AE18B1CC5174600811BD9 /* jifenqiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jifenqiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82AE18F1CC5174600811BD9 /* jifenqiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jifenqiUITests.swift; sourceTree = "<group>"; };
 		C82AE1911CC5174600811BD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C876FBE01CE0C4AA006335CF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C876FBE21CE0C4FD006335CF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
+		C876FBE41CE0C5BB006335CF /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
+		C876FBE51CE0C5BB006335CF /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
+		C876FBE61CE0C5BB006335CF /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
+		C876FBEA1CE0C5CF006335CF /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C876FBE11CE0C4AA006335CF /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,12 @@
 		C82AE1631CC5174600811BD9 = {
 			isa = PBXGroup;
 			children = (
+				C876FBE31CE0C59E006335CF /* db */,
+				C876FBE01CE0C4AA006335CF /* libsqlite3.0.tbd */,
+				C876FBEA1CE0C5CF006335CF /* data.db */,
+				C876FBE41CE0C5BB006335CF /* SQLiteDB.swift */,
+				C876FBE51CE0C5BB006335CF /* SQLTable.swift */,
+				C876FBE61CE0C5BB006335CF /* String-Extras.swift */,
 				C82AE16E1CC5174600811BD9 /* jifenqi */,
 				C82AE1831CC5174600811BD9 /* jifenqiTests */,
 				C82AE18E1CC5174600811BD9 /* jifenqiUITests */,
@@ -97,6 +115,7 @@
 		C82AE16E1CC5174600811BD9 /* jifenqi */ = {
 			isa = PBXGroup;
 			children = (
+				C876FBE21CE0C4FD006335CF /* Bridging-Header.h */,
 				C82AE16F1CC5174600811BD9 /* AppDelegate.swift */,
 				C82AE1711CC5174600811BD9 /* ViewController.swift */,
 				C82AE1731CC5174600811BD9 /* Main.storyboard */,
@@ -123,6 +142,13 @@
 				C82AE1911CC5174600811BD9 /* Info.plist */,
 			);
 			path = jifenqiUITests;
+			sourceTree = "<group>";
+		};
+		C876FBE31CE0C59E006335CF /* db */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82AE17A1CC5174600811BD9 /* LaunchScreen.storyboard in Resources */,
+				C876FBEB1CE0C5CF006335CF /* data.db in Resources */,
 				C82AE1771CC5174600811BD9 /* Assets.xcassets in Resources */,
 				C82AE1751CC5174600811BD9 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C876FBE91CE0C5BB006335CF /* String-Extras.swift in Sources */,
+				C876FBE71CE0C5BB006335CF /* SQLiteDB.swift in Sources */,
+				C876FBE81CE0C5BB006335CF /* SQLTable.swift in Sources */,
 				C82AE1721CC5174600811BD9 /* ViewController.swift in Sources */,
 				C82AE1701CC5174600811BD9 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +433,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hqq.jifenqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/hqq1/Desktop/jifenqi/jifenqi/Bridging-Header.h";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,6 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hqq.jifenqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "/Users/hqq1/Desktop/jifenqi/jifenqi/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +517,7 @@
 				C82AE1961CC5174600811BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C82AE1971CC5174600811BD9 /* Build configuration list for PBXNativeTarget "jifenqiTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +526,7 @@
 				C82AE1991CC5174600811BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C82AE19A1CC5174600811BD9 /* Build configuration list for PBXNativeTarget "jifenqiUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +535,7 @@
 				C82AE19C1CC5174600811BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
